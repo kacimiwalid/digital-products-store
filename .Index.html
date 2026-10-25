@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر المنتجات الرقمية</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #202b3c;
+    }
+    header {
+      background: #172554;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    header h1 { margin: 0 0 12px; }
+    header p { margin: 0; line-height: 1.8; }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 16px;
+    }
+    .intro {
+      text-align: center;
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 3px 14px #0000000d;
+    }
+    .card h2 { font-size: 20px; }
+    .card p { color: #64748b; line-height: 1.8; }
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 11px 16px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>متجر المنتجات الرقمية</h1>
+    <p>أدوات وملفات رقمية تساعدك على تنظيم حياتك وتطوير عملك</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>مرحبًا بك في متجرنا</h2>
+      <p>اكتشف منتجات رقمية عملية يمكنك استخدامها بسهولة.</p>
+    </section>
+
+    <section class="products">
+      <article class="card">
+        <h2>📅 مخطط تنظيم الوقت</h2>
+        <p>قالب لمساعدتك على تنظيم مهامك وأهدافك اليومية.</p>
+        <a class="button" href="mailto:YOUR_EMAIL@example.com?subject=مخطط%20تنظيم%20الوقت">استفسر عن المنتج</a>
+      </article>
+
+      <article class="card">
+        <h2>💰 جدول متابعة المصاريف</h2>
+        <p>نموذج بسيط لتسجيل المصاريف ومتابعة الميزانية.</p>
+        <a class="button" href="mailto:YOUR_EMAIL@example.com?subject=جدول%20المصاريف">استفسر عن المنتج</a>
+      </article>
+
+      <article class="card">
+        <h2>🎯 مخطط الأهداف</h2>
+        <p>نظّم أهدافك وخطواتك في صفحة واحدة واضحة.</p>
+        <a class="button" href="mailto:YOUR_EMAIL@example.com?subject=مخطط%20الأهداف">استفسر عن المنتج</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 متجر المنتجات الرقمية
+  </footer>
+</body>
+</html>
