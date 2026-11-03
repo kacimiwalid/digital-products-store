@@ -91,10 +91,50 @@
         <a class="button" href="mailto:walidkacimi20@gmail.com?subject=مخطط%20الأهداف">استفسر عن المنتج</a>
       </article>
     </section>
-  </main>
+    <section class="card">
+      <h2>تواصل معنا</h2>
+      <form id="contact-form">
+        <label>بريدك الإلكتروني:</label>
+        <input type="email" name="email" required
+          placeholder="أدخل بريدك الإلكتروني">
 
-  <footer>
+        <label>رسالتك:</label>
+        <textarea name="message" required
+          placeholder="اكتب رسالتك هنا"></textarea>
+
+        <button class="button" type="submit">إرسال الرسالة</button>
+        <p id="form-status"></p>
+      </form>
+    </section>
+  </main>
+<footer>
     © 2026 متجر المنتجات الرقمية
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init({
+    publicKey: "sVBU8y4r7MKL59bDQ"
+  });
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const status = document.getElementById("form-status");
+    status.textContent = "جارٍ إرسال الرسالة...";
+
+    emailjs.sendForm(
+      "service_s1nvgiq",
+      "template_qogtwj5",
+      this
+    ).then(function() {
+      status.textContent = "تم إرسال الرسالة بنجاح.";
+      document.getElementById("contact-form").reset();
+    }).catch(function(error) {
+      status.textContent = "تعذر الإرسال. حاول مرة أخرى.";
+      console.log(error);
+    });
+  });
+</script>
 </body>
 </html>
